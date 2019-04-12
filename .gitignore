@@ -1,0 +1,9 @@
+.gradle/
+build/
+*.iml
+out/
+.DS_Store
+.idea/
+cmake-*/
+KotlinCMakeModule/
+CMakeLists.txt
