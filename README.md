@@ -1,8 +1,8 @@
 # Introduction to Ktor Samples
 
-This repository contains samples for the talk Introduction to [Ktor|https://ktor.io]
+This repository contains samples for the talk Introduction to [Ktor](https://ktor.io)
 
-[Slides|https://github.com/hhariri/ktor-samples/blob/master/Ktor.key]
+[Slides](https://github.com/hhariri/ktor-samples/blob/master/Ktor.key)
 
 ## License
 
