@@ -31,7 +31,7 @@ fun Application.async(random: Random = Random(), delayProvider: DelayProvider = 
 
 private suspend fun ApplicationCall.respondHandlingLongCalculation(random: Random, delayProvider: DelayProvider, startTime: Long) {
     val queueTime = System.currentTimeMillis() - startTime
-    var number = 0
+    var number = AtomicInteger()
     val computeTime = measureTimeMillis {
         // We specify a coroutine context, that will use a thread pool for long computing operations.
         // In this case it is not necessary since we are "delaying", not sleeping the thread.
@@ -40,7 +40,7 @@ private suspend fun ApplicationCall.respondHandlingLongCalculation(random: Rando
         withContext(compute) {
             for (index in 0 until 300) {
                 delayProvider(10)
-                number += random.nextInt(100)
+                number.addAndGet(random.nextInt(100))
             }
         }
     }
